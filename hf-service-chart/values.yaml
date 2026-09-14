@@ -1,0 +1,18 @@
+replicaCount: 1
+
+image:
+  repository: hf-mlops-service
+  tag: v1.0
+  pullPolicy: Never
+
+service:
+  type: ClusterIP
+  port: 8000
+
+resources:
+  limits:
+    cpu: "1000m"
+    memory: "1Gi"
+  requests:
+    cpu: "200m"
+    memory: "512Mi"
